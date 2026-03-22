@@ -1,7 +1,7 @@
 import React from 'react';
 import vectorImg from '../../assets/vector1.png';
 
-const Progress = () => {
+const Progress = ({ inProgress, resolved }) => {
     return (
         <div className="flex gap-6 bg-base-100 shadow-md p-4 rounded-xl">
 
@@ -19,7 +19,7 @@ const Progress = () => {
                     alt=""
                 />
                 <p className="text-xl opacity-80 relative z-10">In Progress</p>
-                <h1 className="text-3xl font-bold relative z-10">0</h1>
+                <h1 className="text-3xl font-bold relative z-10">{inProgress}</h1>
             </div>
 
             {/* Resolved Card */}
@@ -36,7 +36,7 @@ const Progress = () => {
                     alt=""
                 />
                 <p className="text-xl opacity-80 relative z-10">Resolved</p>
-                <h1 className="text-3xl font-bold relative z-10">0</h1>
+                <h1 className="text-3xl font-bold relative z-10">{resolved}</h1>
             </div>
         </div>
     );

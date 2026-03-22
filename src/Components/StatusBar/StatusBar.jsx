@@ -1,12 +1,16 @@
 import React, { use } from 'react';
 
-const StatusBar = ({ clicked, dataPromise }) => {
+const StatusBar = ({ clicked, dataPromise ,  }) => {
     const allData = use(dataPromise);
 
     // filter matched items
     const selectedTasks = allData.filter(data =>
         clicked.includes(data.id)
     );
+
+    const handleResolved = () => {
+        
+    }
 
     return (
         <div className="w-full lg:w-1/3 bg-base-200 p-4 rounded">
@@ -18,7 +22,7 @@ const StatusBar = ({ clicked, dataPromise }) => {
                             selectedTasks.map(data => (
                                 <div key={data.id} className="mb-2">
                                     <h2 className="font-semibold ">{data.title}</h2>
-                                    <button onClick={} className="btn btn-success w-full text-sm">
+                                    <button  className="btn btn-success w-full text-sm">
                                         Complete
                                     </button>
                                 </div>

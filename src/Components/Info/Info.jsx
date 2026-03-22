@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import Data from '../Data/Data';
 
-const Info = ({ dataPromise, setClicked, clicked }) => {
+const Info = ({ dataPromise, setClicked, clicked, inProgress, setInprogress }) => {
 
     const allData = use(dataPromise)
     return (
@@ -11,7 +11,7 @@ const Info = ({ dataPromise, setClicked, clicked }) => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                {
-                    allData.map(data => <Data clicked={clicked} setClicked={setClicked} data={data}></Data>)
+                    allData.map(data => <Data inProgress={inProgress} setInprogress={setInprogress}  clicked={clicked} setClicked={setClicked} data={data}></Data>)
                } 
             </div>
         </div>

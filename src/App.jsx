@@ -15,15 +15,16 @@ const dataPromise = fetchData()
 function App() {
 
   const [clicked, setClicked] = useState([])
-  const [resolved]
+  const [resolved, setResoved] = useState(0)
+  const [inProgress, setInprogress] = useState(0)
 
   return (
     <>
       <Navbar></Navbar>
 
-      <Pogress > </Pogress>
+      <Pogress resolved={resolved} inProgress={inProgress} > </Pogress>
 
-      <DataContainer clicked={clicked} setClicked={setClicked}  dataPromise={dataPromise}> </DataContainer>
+      <DataContainer inProgress={inProgress} setInprogress={setInprogress} resolved={resolved} setResoved ={setResoved} clicked={clicked} setClicked={setClicked}  dataPromise={dataPromise}> </DataContainer>
     </>
   )
 }

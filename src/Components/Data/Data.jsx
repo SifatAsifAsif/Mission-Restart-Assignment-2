@@ -3,10 +3,14 @@ import y from '../../assets/y.png';
 import g from '../../assets/g.png';
 import dateIcon from '../../assets/dateIcon.png';
 
-const Data = ({ data, setClicked, clicked }) => {
+const Data = ({ data, setClicked, clicked, inProgress, setInprogress }) => {
     return (
         <div
-            onClick={() => setClicked(prev => [...prev, data.id])}
+            onClick={() => {
+                setClicked(prev => [...prev, data.id])
+                setInprogress(inProgress+1)
+            }
+            }
             className="bg-base-200 p-4 mb-3 rounded-lg shadow"
     >
 
