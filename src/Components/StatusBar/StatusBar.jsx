@@ -1,28 +1,45 @@
 import React, { use } from 'react';
 
-const StatusBar = ({ clicked, dataPromise ,  }) => {
+const StatusBar = ({ clicked, dataPromise, resolved, setResoved }) => {
     const allData = use(dataPromise);
 
-    // filter matched items
+    
     const selectedTasks = allData.filter(data =>
         clicked.includes(data.id)
     );
 
-    const handleResolved = () => {
-        
-    }
+    
+    const activeTasks = selectedTasks.filter(data =>
+        !resolved.includes(data.id)
+    );
+
+    const resolvedTasks = allData.filter(data =>
+        resolved.includes(data.id)
+    );
+
+    const handleResolved = (id) => {
+        setResoved(prev =>
+            prev.includes(id) ? prev : [...prev, id]
+        );
+    };
 
     return (
         <div className="w-full lg:w-1/3 bg-base-200 p-4 rounded">
             <div className="flex flex-col p-3">
 
+               
                 <div className='mb-4'>
                     {
-                        selectedTasks.length > 0 ? (
-                            selectedTasks.map(data => (
+                        activeTasks.length > 0 ? (
+                            activeTasks.map(data => (
                                 <div key={data.id} className="mb-2">
-                                    <h2 className="font-semibold ">{data.title}</h2>
-                                    <button  className="btn btn-success w-full text-sm">
+                                    <h2 className="font-semibold">
+                                        {data.title}
+                                    </h2>
+                                    <button
+                                        onClick={() => handleResolved(data.id)}
+                                        className="btn btn-success w-full text-sm"
+                                    >
                                         Complete
                                     </button>
                                 </div>
@@ -38,11 +55,23 @@ const StatusBar = ({ clicked, dataPromise ,  }) => {
                     }
                 </div>
 
+                
                 <div>
                     <h2 className="font-semibold">Resolved Task</h2>
-                    <p className="text-sm text-gray-500">
-                        No resolved tasks yet.
-                    </p>
+
+                    {
+                        resolvedTasks.length > 0 ? (
+                            resolvedTasks.map(data => (
+                                <p key={data.id} className="text-sm text-gray-500">
+                                    {data.title}
+                                </p>
+                            ))
+                        ) : (
+                            <p className="text-sm text-gray-500">
+                                No resolved tasks yet.
+                            </p>
+                        )
+                    }
                 </div>
 
             </div>

@@ -14,11 +14,11 @@ const Data = ({ data, setClicked, clicked, inProgress, setInprogress }) => {
             className="bg-base-200 p-4 mb-3 rounded-lg shadow"
     >
 
-            {/* Top Row */}
+          
             <div className="flex justify-between items-center mb-2">
                 <h2 className="font-semibold">{data.title}</h2>
 
-                {/* Status Button with custom color + icon */}
+              
                 <button
                     className="btn btn-sm flex items-center gap-2 text-black rounded-full"
                     style={{
@@ -34,14 +34,14 @@ const Data = ({ data, setClicked, clicked, inProgress, setInprogress }) => {
                 </button>
             </div>
 
-            {/* Description */}
+
             <div className="mb-3">
                 <p className="text-sm text-gray-500">
                     {data.description}
                 </p>
             </div>
 
-            {/* Bottom */}
+  
             <div className="flex justify-between items-center">
                 <div className="flex gap-4">
                     <h3 className="font-medium">#{data.id}</h3>
@@ -51,7 +51,7 @@ const Data = ({ data, setClicked, clicked, inProgress, setInprogress }) => {
                 <div className="flex gap-4 items-center">
                     <h3 className="font-medium">{data.customer}</h3>
 
-                    {/* Date with icon */}
+                   
                     <div className="flex items-center gap-1">
                         <img className="w-4 h-4" src={dateIcon} alt="date" />
                         <span className="text-sm">{data.createdAt}</span>

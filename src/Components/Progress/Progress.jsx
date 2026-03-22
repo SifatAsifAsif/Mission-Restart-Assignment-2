@@ -5,7 +5,7 @@ const Progress = ({ inProgress, resolved }) => {
     return (
         <div className="flex gap-6 bg-base-100 shadow-md p-4 rounded-xl">
 
-            {/* In Progress Card */}
+            
             <div className="flex-1 relative text-center text-white h-50 flex flex-col justify-center rounded-xl overflow-hidden bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">
                 <img
                     src={vectorImg}
@@ -22,7 +22,7 @@ const Progress = ({ inProgress, resolved }) => {
                 <h1 className="text-3xl font-bold relative z-10">{inProgress}</h1>
             </div>
 
-            {/* Resolved Card */}
+            
             <div className="flex-1 relative text-center text-white h-50 flex flex-col justify-center rounded-xl overflow-hidden bg-gradient-to-r from-[#54CF68] to-[#00827A]">
                 <img
                     src={vectorImg}

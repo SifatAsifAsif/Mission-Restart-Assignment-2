@@ -1,5 +1,4 @@
 import { useState } from 'react'
-
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import Pogress from './Components/Progress/Progress'
@@ -15,16 +14,29 @@ const dataPromise = fetchData()
 function App() {
 
   const [clicked, setClicked] = useState([])
-  const [resolved, setResoved] = useState(0)
-  const [inProgress, setInprogress] = useState(0)
+  const [resolved, setResoved] = useState([])
+
+
+  const inProgressCount = clicked.filter(
+    id => !resolved.includes(id)
+  ).length;
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar />
 
-      <Pogress resolved={resolved} inProgress={inProgress} > </Pogress>
+      <Pogress
+        resolved={resolved.length}
+        inProgress={inProgressCount}
+      />
 
-      <DataContainer inProgress={inProgress} setInprogress={setInprogress} resolved={resolved} setResoved ={setResoved} clicked={clicked} setClicked={setClicked}  dataPromise={dataPromise}> </DataContainer>
+      <DataContainer
+        resolved={resolved}
+        setResoved={setResoved}
+        clicked={clicked}
+        setClicked={setClicked}
+        dataPromise={dataPromise}
+      />
     </>
   )
 }
