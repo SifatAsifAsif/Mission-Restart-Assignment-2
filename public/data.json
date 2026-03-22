@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "Login not working",
+    "description": "User cannot login using correct credentials.",
+    "customer": "Rahim Uddin",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-10"
+  },
+  {
+    "id": 2,
+    "title": "Payment failed",
+    "description": "Transaction fails during checkout.",
+    "customer": "Karim Ahmed",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-11"
+  },
+  {
+    "id": 3,
+    "title": "UI bug on dashboard",
+    "description": "Sidebar overlaps main content on mobile.",
+    "customer": "Nusrat Jahan",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-12"
+  },
+  {
+    "id": 5,
+    "title": "Slow website performance",
+    "description": "Pages take too long to load.",
+    "customer": "Sadia Islam",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-09"
+  },
+  {
+    "id": 6,
+    "title": "Error 500 on profile page",
+    "description": "Internal server error when visiting profile.",
+    "customer": "Mehedi Hasan",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-13"
+  },
+  {
+    "id": 7,
+    "title": "Notification not showing",
+    "description": "User does not receive notifications.",
+    "customer": "Jannat Ara",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-14"
+  },
+  {
+    "id": 8,
+    "title": "File upload failed",
+    "description": "Users unable to upload images.",
+    "customer": "Rakib Hossain",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-15"
+  },
+  {
+    "id": 10,
+    "title": "Session timeout too fast",
+    "description": "User gets logged out quickly.",
+    "customer": "Fahim Rahman",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-16"
+  },
+  {
+    "id": 11,
+    "title": "Dark mode not applying",
+    "description": "Theme does not switch properly.",
+    "customer": "Mim Khatun",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2026-03-17"
+  }
+]
