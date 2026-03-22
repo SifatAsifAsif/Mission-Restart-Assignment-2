@@ -6,7 +6,7 @@ const DataContainer = ({ dataPromise, setClicked, clicked, resolved, setResoved,
     return (
         <div className="flex flex-col lg:flex-row gap-6 p-3">
 
-            <Info inProgress={inProgress} setInprogress={setInprogress}  clicked={clicked} setClicked={setClicked} dataPromise={dataPromise}> </Info>
+            <Info resolved={resolved} inProgress={inProgress} setInprogress={setInprogress}  clicked={clicked} setClicked={setClicked} dataPromise={dataPromise}> </Info>
             <StatusBar resolved={resolved} setResoved={setResoved} clicked={clicked} dataPromise={dataPromise} > </StatusBar>
 
         </div>
