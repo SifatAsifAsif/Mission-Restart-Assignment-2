@@ -12,7 +12,7 @@ const Navbar = () => {
 
             {/* RIGHT SIDE (DESKTOP MENU) */}
             <div className="hidden lg:flex items-center gap-3">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal font-bold px-1">
                     <li><a>Home</a></li>
                     <li><a>FAQ</a></li>
                     <li><a>Changelog</a></li>

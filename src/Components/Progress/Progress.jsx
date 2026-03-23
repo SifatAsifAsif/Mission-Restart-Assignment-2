@@ -18,7 +18,7 @@ const Progress = ({ inProgress, resolved }) => {
                     className="absolute right-0 top-0 h-full  object-cover  pointer-events-none"
                     alt=""
                 />
-                <p className="text-xl opacity-80 relative z-10">In Progress</p>
+                <p className="text-xl font-bold opacity-80 relative z-10">In Progress</p>
                 <h1 className="text-3xl font-bold relative z-10">{inProgress}</h1>
             </div>
 
@@ -35,7 +35,7 @@ const Progress = ({ inProgress, resolved }) => {
                     className="absolute right-0 top-0 h-full  object-cover  pointer-events-none"
                     alt=""
                 />
-                <p className="text-xl opacity-80 relative z-10">Resolved</p>
+                <p className="text-xl font-bold opacity-80 relative z-10">Resolved</p>
                 <h1 className="text-3xl font-bold relative z-10">{resolved}</h1>
             </div>
         </div>
