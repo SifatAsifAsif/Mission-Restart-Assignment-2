@@ -13,7 +13,7 @@ const Footer = () => {
 
                 <div className="lg:col-span-2">
                     <h1 className="text-xl font-bold mb-2">CS — Ticket System</h1>
-                    <p>CS — Ticket System related paragraph details</p>
+                    <p>Manage customer support effortlessly with CS — Ticket System. Track, organize, and resolve tickets faster.</p>
                 </div>
 
                 <div>
