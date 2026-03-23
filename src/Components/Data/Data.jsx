@@ -1,6 +1,6 @@
 import React from 'react';
 import y from '../../assets/y.png';
-import g from '../../assets/g.png';
+import g from '../../assets/gr.png';
 import dateIcon from '../../assets/dateIcon.png';
 
 const Data = ({ data, setClicked, clicked, inProgress, setInprogress }) => {
